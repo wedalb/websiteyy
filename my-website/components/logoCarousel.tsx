@@ -28,12 +28,21 @@ const logos: Logo[] = [
   { src: "/company-logos/tum.png", alt: "TUM", width: 200, height: 100 },
   { src: "/company-logos/tum-ai.png", alt: "Tum-ai", width: 200, height: 100 },
   { src: "/company-logos/siemens.png", alt: "Siemens", width: 200, height: 100 },
+  { src: "/company-logos/masterschool.png", alt: "Masterschool", width: 200, height: 100 },
+
 ];
 
 const LogoCarousel: React.FC = () => {
   return (
       <div style={{ width: "100%", overflow: "hidden" }}>
-        <Marquee speed={100} gradient={true} gradientColor={"black"} gradientWidth={200} pauseOnHover={true} >
+        <Marquee
+            speed={100}
+            gradient={true}
+            gradientColor={"black"}
+            gradientWidth={300}
+            pauseOnHover={true}
+            style={{ backgroundColor: "black" }}
+        >
           {logos.map((logo, index) => (
               <div key={index} style={{ margin: "0 20px" }}>
                 <Image

@@ -9,20 +9,20 @@ export const siteConfig = {
       href: "/",
     },
     {
-      label: "Docs",
-      href: "/docs",
+      label: "Projects",
+      href: "/projects",
     },
     {
-      label: "Pricing",
-      href: "/pricing",
+      label: "Hackathons",
+      href: "/hackathons",
     },
     {
-      label: "Blog",
-      href: "/blog",
+      label: "Chat",
+      href: "/chat",
     },
     {
-      label: "About",
-      href: "/about",
+      label: "Career",
+      href: "/career",
     },
   ],
   navMenuItems: [
@@ -35,7 +35,7 @@ export const siteConfig = {
       href: "/dashboard",
     },
     {
-      label: "Projects",
+      label: "projects",
       href: "/projects",
     },
     {

@@ -10,12 +10,13 @@ import Marquee from "react-fast-marquee";
 import Image from 'next/image';
 import LogoCarousel from "@/components/logoCarousel";
 import React from "react";
+import SkillsCarousel from "@/components/skillsCarousel";
 
 
 export default function Home() {
     return (
         <div>
-            <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+            <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 min-h-screen" >
                 <div className="inline-block max-w-xl text-center justify-center">
                     <span className={title()}>Make&nbsp;</span>
                     <span className={title({color: "violet"})}>beautiful&nbsp;</span>
@@ -47,19 +48,10 @@ export default function Home() {
                         GitHub
                     </Link>
                 </div>
-
-                <div className="mt-8">
-                    <Snippet hideCopyButton hideSymbol variant="bordered">
-          <span>
-            Get started by editing <Code color="primary">app/page.tsx</Code>
-          </span>
-                    </Snippet>
-                </div>
-            </section>
-            <section>
-                <h1> Hello </h1>
                 <LogoCarousel/>
-
+            </section>
+            <section className="min-h-screen">
+                <SkillsCarousel/>
             </section>
         </div>
 
