@@ -11,19 +11,20 @@ import Image from 'next/image';
 import LogoCarousel from "@/components/logoCarousel";
 import React from "react";
 import SkillsCarousel from "@/components/skillsCarousel";
+import ParallaxText from "@/components/parallaxText";
 
 
 export default function Home() {
     return (
         <div>
-            <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 min-h-screen" >
+            <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10" >
                 <div className="inline-block max-w-xl text-center justify-center">
-                    <span className={title()}>Make&nbsp;</span>
-                    <span className={title({color: "violet"})}>beautiful&nbsp;</span>
+                    <span className={title()}>(WIP Website) Chat with&nbsp;</span>
+                    <span className={title({color: "violet"})}>Heidi Albarazi&nbsp;</span>
                     <br/>
-                    <span className={title()}> websites regardless of your design experience.</span>
+                    <span className={title()}> anytime!</span>
                     <div className={subtitle({class: "mt-4"})}>
-                        Beautiful, fast and modern React UI library.
+                        Designer, Developer and Researcher!
                     </div>
                 </div>
 
@@ -37,7 +38,7 @@ export default function Home() {
                         })}
                         href={siteConfig.links.docs}
                     >
-                        Documentation
+                        Chat with me!
                     </Link>
                     <Link
                         isExternal
@@ -50,9 +51,12 @@ export default function Home() {
                 </div>
                 <LogoCarousel/>
             </section>
-            <section className="min-h-screen">
+            {/*
+            <section>
                 <SkillsCarousel/>
+
             </section>
+            */}
         </div>
 
     );

@@ -1,12 +1,11 @@
-import { title } from "@/components/primitives";
-import React from "react";
 import Image from "next/image";
-import {Timeline} from "@/components/ui/timeline";
+import React from "react";
+import { Timeline } from "@/components/ui/timeline";
 
-export default function HackathonsPage() {
+export function TimelineDemo() {
     const data = [
         {
-            title: "HackaTUM 2022",
+            title: "Mar 2025 - Now Siemens UI/UX Design in Intrapreneurship",
             content: (
                 <div>
                     <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
@@ -46,7 +45,7 @@ export default function HackathonsPage() {
             ),
         },
         {
-            title: "TEG Hackathon 2023",
+            title: "Jun 2024 - Oct 2024 Jetbrains Software Engineering Research Intern",
             content: (
                 <div>
                     <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
@@ -91,7 +90,7 @@ export default function HackathonsPage() {
             ),
         },
         {
-            title: "START Hack 2023",
+            title: "Aug 2023 - Oct 2024 Jetbrains Campus Ambassador",
             content: (
                 <div>
                     <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
@@ -136,7 +135,7 @@ export default function HackathonsPage() {
             ),
         },
         {
-            title: "TUM.ai Makeathon 2023",
+            title: "Jun 2022 - Aug 2023 Toowoxx",
             content: (
                 <div>
                     <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
@@ -181,7 +180,7 @@ export default function HackathonsPage() {
             ),
         },
         {
-            title: "START Sport Hack",
+            title: "Jan 2022 - now Freelancer ",
             content: (
                 <div>
                     <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
@@ -226,7 +225,7 @@ export default function HackathonsPage() {
             ),
         },
         {
-            title: "EthHack 2023",
+            title: "Oct 2020 - May 2022 LMU Melessa",
             content: (
                 <div>
                     <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
@@ -269,69 +268,11 @@ export default function HackathonsPage() {
                     </div>
                 </div>
             ),
-        },
-        {
-            title: "Planetarium Hack Bochum",
-            content: (
-                <div>
-                </div>
-            )
-        },
-        {
-            title: "FuturePynk Hack 2023",
-            content: (
-                <div>
-                </div>
-            )
-        },
-        {
-            title: "BaselHack 2023",
-            content: (
-                <div>
-                </div>
-            )
-        },
-        {
-            title: "Cassini Hackathon 2023",
-            content: (
-                <div>
-                </div>
-            )
-        },
-        {
-            title: "Junction Hack 2023 Helsinki",
-            content: (
-                <div>
-                </div>
-            )
-        },
-        {
-            title: "HackaTUM 2023",
-            content: (
-                <div>
-                </div>
-            )
-        },
-        {
-            title: "Pre-Incubator TEG Sustainaswag",
-            content: (
-                <div>
-                </div>
-            )
-        },
-        {
-            title: "GreenHack 2024 Paris",
-            content: (
-                <div>
-                </div>
-            )
         },
     ];
-  return (
-    <div>
-      <h1 className={title()}>Hackathons</h1>
-        <Timeline data={data} />
-
-    </div>
-  );
+    return (
+        <div className="w-full">
+            <Timeline data={data} />
+        </div>
+    );
 }
