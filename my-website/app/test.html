@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protein Activity Visualization</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Protein Activity Visualization</h1>
+
+    <div class="visualization-container">
+        <div class="plot-container">
+            <h2>Volcano Plot</h2>
+            <p>Click on a point to see the boxplot for that gene</p>
+            <div id="volcano-plot"></div>
+        </div>
+
+        <div class="plot-container">
+            <h2>Boxplot</h2>
+            <p id="boxplot-title">Select a gene from the volcano plot</p>
+            <div id="boxplot"></div>
+
+            <div id="papers-container">
+                <h3>Related Scientific Papers</h3>
+                <div id="papers-list">
+                    <p>Select a gene to see related papers</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Parse the volcano plot data
+    const volcanoPlotData = JSON.parse('{{ volcano_plot | safe }}');
+
+    // Render the volcano plot
+    Plotly.newPlot('volcano-plot', volcanoPlotData.data, volcanoPlotData.layout);
+
+    // Add click event to the volcano plot
+    document.getElementById('volcano-plot').on('plotly_click', function(data) {
+        const point = data.points[0];
+        const geneName = point.hovertext;
+
+        // Update the boxplot title
+        document.getElementById('boxplot-title').textContent = `Protein Concentration for ${geneName}`;
+
+        // Fetch boxplot data for the selected gene
+        fetch(`/boxplot/${geneName}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    console.error(data.error);
+                    return;
+                }
+
+                // Parse and render the boxplot
+                const boxplotData = JSON.parse(data.boxplot);
+                Plotly.newPlot('boxplot', boxplotData.data, boxplotData.layout);
+
+                // Display related papers
+                const papersContainer = document.getElementById('papers-list');
+                if (data.papers && data.papers.length > 0) {
+                    let papersHTML = '<ul>';
+                    data.papers.forEach(paper => {
+                        papersHTML += `<li><a href="${paper.url}" target="_blank">${paper.title}</a></li>`;
+                    });
+                    papersHTML += '</ul>';
+                    papersContainer.innerHTML = papersHTML;
+                } else {
+                    papersContainer.innerHTML = '<p>No related papers found for this gene</p>';
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching boxplot data:', error);
+            });
+    });
+</script>
+</body>
+</html>
+
