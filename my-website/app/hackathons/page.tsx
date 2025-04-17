@@ -7,6 +7,7 @@ export default function HackathonsPage() {
     const data = [
         {
             title: "HackaTUM 2022",
+            year: "2022",
             content: (
                 <div>
                     <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
@@ -46,7 +47,8 @@ export default function HackathonsPage() {
             ),
         },
         {
-            title: "TEG Hackathon 2023",
+            title: "TEG Hackathon",
+            year: "2023",
             content: (
                 <div>
                     <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
@@ -91,7 +93,8 @@ export default function HackathonsPage() {
             ),
         },
         {
-            title: "START Hack 2023",
+            title: "START Hack",
+            year: "2023",
             content: (
                 <div>
                     <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
@@ -136,7 +139,8 @@ export default function HackathonsPage() {
             ),
         },
         {
-            title: "TUM.ai Makeathon 2023",
+            title: "TUM.ai Makeathon",
+            year: "2023",
             content: (
                 <div>
                     <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
@@ -182,6 +186,7 @@ export default function HackathonsPage() {
         },
         {
             title: "START Sport Hack",
+            year: "2023",
             content: (
                 <div>
                     <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
@@ -226,7 +231,8 @@ export default function HackathonsPage() {
             ),
         },
         {
-            title: "EthHack 2023",
+            title: "EthHack",
+            year: "2023",
             content: (
                 <div>
                     <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
@@ -272,41 +278,55 @@ export default function HackathonsPage() {
         },
         {
             title: "Planetarium Hack Bochum",
+            year: "2023",
             content: (
                 <div>
                 </div>
             )
         },
         {
-            title: "FuturePynk Hack 2023",
+            title: "FuturePynk Hack",
+            year: "2023",
             content: (
                 <div>
                 </div>
             )
         },
         {
-            title: "BaselHack 2023",
+            title: "BaselHack",
+            year: "2023",
             content: (
                 <div>
                 </div>
             )
         },
         {
-            title: "Cassini Hackathon 2023",
+            title: "Cassini Hackathon",
+            year: "2023",
             content: (
                 <div>
                 </div>
             )
         },
         {
-            title: "Junction Hack 2023 Helsinki",
+            title: "Junction Hack Helsinki",
+            year: "2023",
             content: (
                 <div>
                 </div>
             )
         },
         {
-            title: "HackaTUM 2023",
+            title: "HackaTUM",
+            year: "2023",
+            content: (
+                <div>
+                </div>
+            )
+        },
+        {
+            title: "Innovation Sprint",
+            year: "2024",
             content: (
                 <div>
                 </div>
@@ -314,13 +334,31 @@ export default function HackathonsPage() {
         },
         {
             title: "Pre-Incubator TEG Sustainaswag",
+            year: "2024",
             content: (
                 <div>
                 </div>
             )
         },
         {
-            title: "GreenHack 2024 Paris",
+            title: "GreenHack Paris",
+            year: "2024",
+            content: (
+                <div>
+                </div>
+            )
+        },
+        {
+            title: "Upcoming: Q-Hack ...",
+            year: "2025",
+            content: (
+                <div>
+                </div>
+            )
+        },
+        {
+            title: "Upcoming: Circular Hack Fest ...",
+            year: "2025",
             content: (
                 <div>
                 </div>
