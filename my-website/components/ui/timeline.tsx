@@ -10,7 +10,7 @@ import React, { useEffect, useRef, useState } from "react";
 interface TimelineEntry {
     title: string;
     content: React.ReactNode;
-    year: string;
+    year?: string;
     company?: string;
     logo?: string;
     tags?: string[];
