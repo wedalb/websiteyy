@@ -16,7 +16,7 @@ interface Logo {
 // List of logos with the details
 const logos: Logo[] = [
   { src: "/company-logos/halogenos.png", alt: "halogenOS", width: 200, height: 200 },
-  { src: "/company-logos/jetbrains-internship.png", alt: "Jetbrains", width: 200, height: 100 },
+  { src: "/company-logos/jetbrains.png", alt: "Jetbrains", width: 200, height: 100 },
   { src: "/company-logos/lmu.png", alt: "LMU", width: 200, height: 100 },
   { src: "/company-logos/manage&more.png", alt: "manage & more", width: 200, height: 100 },
   { src: "/company-logos/melessa.png", alt: "Melessa", width: 200, height: 100 },

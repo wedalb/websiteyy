@@ -13,6 +13,7 @@ interface TimelineEntry {
     year: string;
     company?: string;
     logo?: string;
+    tags?: string[];
 }
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
@@ -37,7 +38,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
     return (
         <div
-            className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
+            className="w-full bg-white dark:bg-black font-sans md:px-10"
             ref={containerRef}
         >
             <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
