@@ -12,14 +12,16 @@ import LogoCarousel from "@/components/logoCarousel";
 import React from "react";
 import SkillsCarousel from "@/components/skillsCarousel";
 import ParallaxText from "@/components/parallaxText";
+import {UnderConstruction} from "@/components/layout/construction";
 
 
 export default function Home() {
     return (
         <div>
+            <UnderConstruction />
             <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10" >
                 <div className="inline-block max-w-xl text-center justify-center">
-                    <span className={title()}>(WIP Website) Chat with&nbsp;</span>
+                    <span className={title()}>Chat with&nbsp;</span>
                     <span className={title({color: "violet"})}>Heidi Albarazi&nbsp;</span>
                     <br/>
                     <span className={title()}> anytime!</span>

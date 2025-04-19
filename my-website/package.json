@@ -9,6 +9,11 @@
   "lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix"
  },
  "dependencies": {
+  "@fortawesome/fontawesome-svg-core": "^6.7.2",
+  "@fortawesome/free-brands-svg-icons": "^6.7.2",
+  "@fortawesome/free-solid-svg-icons": "^6.7.2",
+  "@fortawesome/react-fontawesome": "^0.2.2",
+  "@heroicons/react": "^2.2.0",
   "@heroui/button": "2.2.13",
   "@heroui/code": "2.2.10",
   "@heroui/input": "2.4.13",
@@ -25,16 +30,18 @@
   "@react-aria/visually-hidden": "3.8.19",
   "@tabler/icons-react": "^3.31.0",
   "clsx": "^2.1.1",
-  "framer-motion": "11.13.1",
+  "framer-motion": "^11.13.1",
   "intl-messageformat": "^10.5.0",
-  "motion": "^12.5.0",
+  "lucide-react": "^0.501.0",
+  "motion": "^12.7.4",
   "next": "15.0.4",
   "next-themes": "^0.4.4",
   "openai": "^4.95.1",
   "react": "18.3.1",
   "react-dom": "18.3.1",
   "react-fast-marquee": "^1.6.5",
-  "tailwind-merge": "^3.0.2"
+  "simplex-noise": "^4.0.3",
+  "tailwind-merge": "^3.2.0"
  },
  "devDependencies": {
   "@next/eslint-plugin-next": "15.0.4",
