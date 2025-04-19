@@ -60,7 +60,7 @@ export const UnderConstruction = () => {
                     transition={{ delay: 0.4 }}
                     className="mt-4 max-w-xl text-center text-neutral-300 text-base sm:text-lg leading-relaxed"
                 >
-                    I’m working on something magical behind the scenes. Come back soon for the full reveal ✨
+                    Iam working on something magical behind the scenes. Come back soon for the full reveal ✨
                 </motion.p>
             </motion.div>
         </motion.section>
