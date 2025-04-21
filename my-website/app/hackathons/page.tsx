@@ -1,377 +1,272 @@
+"use client";
 import React from "react";
-import Image from "next/image";
 
 import { Timeline } from "@/components/ui/timeline";
 import Iphone15Pro from "@/components/iphone15pro";
 import { Safari } from "@/components/safari";
+import {
+  SiSwift,
+  SiPython,
+  SiFastapi,
+  SiReact,
+  SiJavascript,
+  SiNodedotjs,
+  SiFigma,
+  SiAndroid,
+  SiKotlin,
+  SiChromewebstore,
+  SiHtml5,
+  SiCss3,
+  SiTensorflow,
+  SiArduino,
+  SiChatbot,
+  SiIonic,
+  SiD3Dotjs,
+} from "react-icons/si";
+// HackathonsPage.tsx
+import { TimelineEntry } from "@/components/ui/timeline";
 
 export default function HackathonsPage() {
-  const data = [
+  const data: TimelineEntry[] = [
     {
       title: "HackaTUM",
       year: "2022",
-      company: "David",
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            https://github.com/wedalb/david
-            <a
-              href={
-                "https://www.linkedin.com/feed/update/urn:li:activity:7000431859855675392/?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7000431859855675392%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&originTrackingId=WXNeECQ%2BT5qv7WgHisDSBA%3D%3D"
-              }
-            >
-              Link1{" "}
-            </a>
-          </p>
-
-          <div className="grid grid-cols-4 gap-4 w-full">
-            <div className="w-full aspect-[433/882]">
-              <Iphone15Pro
-                className="w-full h-full"
-                src="/hackathon-images/hackaTUM-2022/img.png"
-              />
-            </div>
-            <div className="w-full aspect-[433/882]">
-              <Iphone15Pro
-                className="w-full h-full"
-                src="/hackathon-images/hackaTUM-2022/img_1.png"
-              />
-            </div>
-            <div className="w-full aspect-[433/882]">
-              <Iphone15Pro
-                className="w-full h-full"
-                src="/hackathon-images/hackaTUM-2022/img_2.png"
-              />
-            </div>
-            <div className="w-full aspect-[433/882]">
-              <Iphone15Pro
-                className="w-full h-full"
-                src="/hackathon-images/hackaTUM-2022/img_3.png"
-              />
-            </div>
-          </div>
-        </div>
-      ),
+      company: {
+        name: "David",
+      },
+      subtitle: "HackaTUM 2022 – 2nd Place",
+      description: "" +
+          "The David app aims to improve the people's experience in the City of Munich with the help of gamification tools. The user can write stories about a building while roaming around the city and the stories are categorised into a particular genre with the help of Machine Learning.\n" +
+          "\n" +
+          "The fun part is that the users can read stories written by other people about a particular theme and can upvote or downvote them, then the gamification part comes into play, there is a leader board of stories based on the number of downvotes and upvotes it has got and attractive badges also appear on the profile of the user based on the number of stories written by the user." +
+          "",
+      award: true,
+      tags: [
+        { name: "SwiftUI", icon: <SiSwift /> },
+        { name: "Python", icon: <SiPython /> },
+        { name: "FastAPI", icon: <SiFastapi /> },
+        { name: "React", icon: <SiReact /> },
+      ],
+      links: {
+        github: "https://github.com/wedalb/david",
+        devpost: "https://devpost.com/software/david-fn1k62",
+        linkedin: "https://www.linkedin.com/feed/update/urn:li:activity:7000431859855675392/",
+        website: "https://hack.tum.de/",
+      },
+      iPhoneImages: [
+        "/hackathon-images/hackaTUM-2022/img.png",
+        "/hackathon-images/hackaTUM-2022/img_1.png",
+        "/hackathon-images/hackaTUM-2022/img_2.png",
+        "/hackathon-images/hackaTUM-2022/img_3.png",
+      ],
     },
     {
       title: "TEG Hack",
       year: "2023",
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            I usually run out of copy, but when I see content this big, I try to
-            integrate lorem ipsum.
-          </p>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Lorem ipsum is for people who are too lazy to write copy. But we are
-            not. Here are some more example of beautiful designs I built.
-          </p>
-          <div className="grid grid-cols-2 gap-4 w-full">
-            <div className="w-full aspect-[433/882]">
-              <Iphone15Pro
-                className="w-full h-full"
-                src="/hackathon-images/hackaTUM-2022/img.png"
-              />
-            </div>
-            <div className="w-full aspect-[433/882]">
-              <Iphone15Pro
-                className="w-full h-full"
-                src="/hackathon-images/hackaTUM-2022/img_1.png"
-              />
-            </div>
-          </div>
-        </div>
-      ),
+      company: {
+        name: "TEG - The Entrepreneurial Group",
+      },
+      subtitle: "TEG Hack 2023 – 1st Place",
+      description: "We built an interactive prototype for TEG’s community platform and won 1st place.",
+      award: true,
+      tags: [{ name: "Figma", icon: <SiFigma /> }],
+      links: {
+        linkedin: "https://www.linkedin.com/feed/update/urn:li:activity:7000431859855675392/",
+        website: "https://www.teg-ev.de/",
+      },
+      iPhoneImages: [
+        "/hackathon-images/startHack-2023/img.png",
+        "/hackathon-images/startHack-2023/img_1.png",
+        "/hackathon-images/startHack-2023/img_2.png",
+      ],
     },
     {
       title: "START Hack",
       year: "2023",
-      company: "Luisa",
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            I usually run out of copy, but when I see content this big, I try to
-            integrate lorem ipsum.
-            <a href="https://github.com/shivambanka/LUISA/blob/main/Antler_International-nerds.pdf.pdf">
-              Luisa PDF
-            </a>
-          </p>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Lorem ipsum is for people who are too lazy to write copy. But we are
-            not. Here are some more example of beautiful designs I built.
-          </p>
-          <div className=" w-full">
-            <Safari
-              className="size-full"
-              imageSrc="/hackathon-images/startHack-2023/img.png"
-              url="luisa.ai"
-            />
-          </div>
-        </div>
-      ),
+      company: {
+        name: "Luisa",
+      },
+      subtitle: "START Hack 2023 – First Time at STARTHack",
+      description: "A cross-platform mobile experience built in Android & Kotlin.",
+      award: false,
+      tags: [
+        { name: "Android", icon: <SiAndroid /> },
+        { name: "Kotlin", icon: <SiKotlin /> },
+        { name: "Figma", icon: <SiFigma /> },
+      ],
+      links: {
+        github: "https://github.com/shivambanka/LUISA/blob/main/Antler_International-nerds.pdf.pdf",
+        website: "https://luisa.ai/",
+        linkedin: "https://www.linkedin.com/feed/update/urn:li:activity:7000431859855675392/",
+      },
+      safariImages: ["/hackathon-images/startHack-2023/img.png"],
     },
     {
       title: "TUM.ai Makeathon",
       year: "2023",
-      company: "UnCancelled",
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            https://github.com/wedalb/uncancelled, Uncancelled I usually run out
-            of copy, but when I see content this big, I try to integrate lorem
-            ipsum.
-          </p>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Lorem ipsum is for people who are too lazy to write copy. But we are
-            not. Here are some more example of beautiful designs I built.
-          </p>
-          <div className=" w-full">
-            <Safari
-              className="size-full"
-              imageSrc="https://via.placeholder.com/1200x750"
-              url="luisa.ai"
-            />
-          </div>
-        </div>
-      ),
+      company: {
+        name: "Uncancelled",
+      },
+      subtitle: "TUM.ai Makeathon 2023 – Finalists",
+      description: "A Chrome extension for sentiment analysis, built with JS & TensorFlow.",
+      award: true,
+      tags: [
+        { name: "JavaScript", icon: <SiJavascript /> },
+        { name: "TensorFlow", icon: <SiTensorflow /> },
+        { name: "Chrome Extension", icon: <SiChromewebstore /> },
+        { name: "Python", icon: <SiPython /> },
+      ],
+      links: {
+        github: "https://github.com/wedalb/uncancelled",
+        website: "https://www.tum-ai.com/",
+      },
+      safariImages: ["https://via.placeholder.com/1200x750"],
     },
     {
       title: "START Sport Hack",
       year: "2023",
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            I usually run out of copy, but when I see content this big, I try to
-            integrate lorem ipsum.
-          </p>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Lorem ipsum is for people who are too lazy to write copy. But we are
-            not. Here are some more example of beautiful designs I built.
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              alt="hero template"
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-              height={500}
-              src="https://assets.aceternity.com/pro/hero-sections.png"
-              width={500}
-            />
-            <Image
-              alt="feature template"
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-              height={500}
-              src="https://assets.aceternity.com/features-section.png"
-              width={500}
-            />
-            <Image
-              alt="bento template"
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-              height={500}
-              src="https://assets.aceternity.com/pro/bento-grids.png"
-              width={500}
-            />
-            <Image
-              alt="cards template"
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-              height={500}
-              src="https://assets.aceternity.com/cards.png"
-              width={500}
-            />
-          </div>
-        </div>
-      ),
+      company: {
+        name: "Prosthetic Hand",
+      },
+      subtitle: "START Sport Hack 2023 – 2nd Place",
+      description: "An Arduino-powered prosthetic hand prototype for adaptive training.",
+      award: true,
+      tags: [
+        { name: "Arduino", icon: <SiArduino /> },
+        { name: "Python", icon: <SiPython /> },
+        { name: "Figma", icon: <SiFigma /> },
+      ],
+      images: ["https://via.placeholder.com/1200x750"],
     },
     {
       title: "EthHack",
       year: "2023",
-      company: "Karmalized",
+      company: {
+        name: "Karmalized",
+      },
+      subtitle: "EthHack 2023 – Great Experience",
+      description: "We had a lot of fun building Karmalized, a smart engaging community app for Munich.",
+      award: false,
       tags: [
-        "solidity",
-        "react",
-        "css",
-        "JavaScript",
-        "Ionic",
-        "web3.js",
-        "Truffle",
+        { name: "Solidity", icon: <SiJavascript /> },
+        { name: "React", icon: <SiReact /> },
+        { name: "CSS", icon: <SiCss3 /> },
+        { name: "JavaScript", icon: <SiJavascript /> },
+        { name: "Ionic", icon: <SiChatbot /> },
+        { name: "web3.js", icon: <SiJavascript /> },
+        { name: "Truffle", icon: <SiJavascript /> },
+        { name: "Figma", icon: <SiFigma /> },
       ],
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            <a href="https://ethmunich.devfolio.co/">Devfolio</a>
-            <a href="https://devfolio.co/projects/karmalized-b2e9">
-              Devfolio Project
-            </a>
-            <a href="https://youtu.be/vZJQIbkvjUI">Youtube Video</a>I usually
-            run out of copy, but when I see content this big, I try to integrate
-            lorem ipsum.
-          </p>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Lorem ipsum is for people who are too lazy to write copy. But we are
-            not. Here are some more example of beautiful designs I built.
-          </p>
-          <div className="grid grid-cols-2 gap-2 w-full">
-            <div className=" w-full">
-              <Safari
-                className="size-full"
-                imageSrc="hackathon-images/ethHack-2023/img_1.png"
-                url="karmalized.com"
-              />
-            </div>
-            <div className=" w-full">
-              <Safari
-                className="size-full"
-                imageSrc="hackathon-images/ethHack-2023/img_2.png"
-                url="karmalized.com"
-              />
-            </div>
-          </div>
-        </div>
-      ),
+      links: {
+        devpost: "https://devfolio.co/projects/karmalized-b2e9",
+        youtube: "https://youtu.be/vZJQIbkvjUI",
+      },
+      safariImages: [
+        "/hackathon-images/ethHack-2023/img_1.png",
+        "/hackathon-images/ethHack-2023/img_2.png",
+      ],
     },
     {
       title: "Planetarium Hack Bochum",
       year: "2023",
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            <a href="https://pitch.com/v/galactic-space-mission-xth6b6">
-              Pitch Link
-            </a>
-            mxr storytelling Zeiss Planetarium Bochum I usually run out of copy,
-            but when I see content this big, I try to integrate lorem ipsum.
-          </p>
-        </div>
-      ),
+      company: {
+        name: "galactic space mission",
+      },
+      subtitle: "Planetarium Hack Bochum 2023 – First Place",
+      description: "We had a lot of fun building Galactic Space Mission, a smart engaging community app for Munich.",
+      award: true,
+      tags: [
+        { name: "Solidity", icon: <SiJavascript /> },
+        { name: "React", icon: <SiReact /> },
+        { name: "CSS", icon: <SiCss3 /> },
+        { name: "JavaScript", icon: <SiJavascript /> },
+        { name: "Ionic", icon: <SiChatbot /> },
+        { name: "web3.js", icon: <SiJavascript /> },
+        { name: "Truffle", icon: <SiJavascript /> },
+        { name: "Figma", icon: <SiFigma /> },
+      ],
+      links: { website: "https://pitch.com/v/galactic-space-mission-xth6b6" },
+      images: ["https://via.placeholder.com/1200x750"],
     },
     {
       title: "FuturePynk Hack",
       year: "2023",
-      content: <div />,
+      company: {
+        name: "FuturePynk",
+      },
+      subtitle: "FuturePynk Hack 2023 – First Place",
+      description: "We had a lot of fun building Sustainable Thingy, a smart engaging community app for Munich.",
+      award: false,
+      tags: [
+        { name: "Python", icon: <SiPython /> },
+        { name: "Swift", icon: <SiSwift /> },
+        { name: "SwiftUI", icon: <SiSwift /> },
+      ],
     },
     {
       title: "Cassini Hackathon",
       year: "2023",
-      company: "ConCast",
-      content: <div>https://github.com/wedalb/cassinihack-frontend</div>,
+      company: {
+        name: "ConCast",
+      },
+      subtitle: "lala",
+      description: "description",
+      award: true,
+      tags: [
+        { name: "Python", icon: <SiPython /> },
+        { name: "Streamlit", icon: <SiNodedotjs /> },
+        { name: "TensorFlow", icon: <SiTensorflow /> },
+        { name: "OpenCV", icon: <SiFigma /> },
+      ],
+      links: {
+        github: "https://github.com/wedalb/cassinihack-backend",
+        website: "https://concast.streamlit.app/",
+      },
     },
     {
       title: "BaselHack",
       year: "2023",
-      company: "DineDivine",
-      content: <div />,
+      company: {
+        name: "Dine Divine",
+      },
+      subtitle: "BaselHack 2023 – First Place",
+      description: "We had a lot of fun building DineDivine, a smart engaging community app for Munich.",
+      award: true,
+      tags: [
+        { name: "Python", icon: <SiPython /> },
+        { name: "ChatGPT", icon: <SiChatbot /> },
+        { name: "Ionic", icon: <SiIonic /> },
+        { name: "Spline", icon: <SiD3Dotjs /> },
+      ],
     },
     {
-      title: "Junction Hack Helsinki",
+      title: "Junction Hack",
       year: "2023",
-      content: <div />,
+      company: {
+        name: "junction",
+      },
+      subtitle: "Junction Hack Helsinki 2023 – First Place",
+      description: "We had a lot of fun building Junction, a smart engaging community app for Munich.",
+      award: true,
+      tags: [
+        { name: "Figma", icon: <SiFigma /> },
+        { name: "ChatGPT", icon: <SiChatbot /> },
+      ],
     },
     {
-      title: "HackaTUM",
-      year: "2023",
-      company: "FoodieBag",
-      content: (
-        <div>
-          <p>https://pitch.com/v/foodiebag-shr3yz</p>
-
-          <div className="grid grid-cols-4 gap-4 w-full">
-            <div className="w-full aspect-[433/882]">
-              <Iphone15Pro
-                className="w-full h-full"
-                src="/hackathon-images/hackaTUM-2023/img_1.png"
-              />
-            </div>
-            <div className="w-full aspect-[433/882]">
-              <Iphone15Pro
-                className="w-full h-full"
-                src="/hackathon-images/hackaTUM-2023/img_2.png"
-              />
-            </div>
-            <div className="w-full aspect-[433/882]">
-              <Iphone15Pro
-                className="w-full h-full"
-                src="/hackathon-images/hackaTUM-2023/img_3.png"
-              />
-            </div>
-            <div className="w-full aspect-[433/882]">
-              <Iphone15Pro
-                className="w-full h-full"
-                src="/hackathon-images/hackaTUM-2023/img_4.png"
-              />
-            </div>
-          </div>
-          <div className="grid grid-cols  w-full">
-            <div className=" w-full">
-              <Safari
-                className="size-full"
-                imageSrc="hackathon-images/hackaTUM-2023/img.png"
-                url="karmalized.com"
-              />
-            </div>
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "Innovation Sprint",
-      year: "2024",
-      company: "FermentMe",
-      content: <div />,
-    },
-    {
-      title: "Pre-Incubator TEG",
-      year: "2024",
-      company: "Sustainaswag",
-      content: (
-        <div>
-          <a href="https://www.linkedin.com/posts/activity-7153456435400482816-eymZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAACdmqxgB6gxC8ia8f3YXJ6OUnvhbiaixe9E">
-            {" "}
-            Linkedin{" "}
-          </a>
-        </div>
-      ),
-    },
-    {
-      title: "GreenHack Paris",
-      year: "2024",
-      company: "diversions.ai",
-      content: <div />,
-    },
-    {
-      title: "Data4Good",
-      year: "2024",
-      company: "diversions.ai",
-      content: <div />,
-    },
-    {
-      title: "Upcoming: Q-Hack ...",
+      title: "Upcoming: Q-Hack",
       year: "2025",
-      content: <div />,
+      subtitle: "Stay tuned…",
     },
     {
-      title: "Upcoming: Circular Hack Fest ...",
+      title: "Upcoming: Circular Hack Fest",
       year: "2025",
-      content: <div />,
     },
     {
-      title: "Upcoming: TUM.ai Makeathon",
+      title: "Upcoming: Junction Hack 2025",
       year: "2025",
-      content: <div />,
-    },
-    {
-      title: "Upcoming: Junction hack 2025",
-      year: "2025",
-      content: <div />,
-    },
-    {
-      title: "Upcoming: HackaTUM",
-      year: "2025",
-      content: <div />,
     },
   ];
 
-  return (
-    <div>
-      <Timeline data={data} />
-    </div>
-  );
+  return <Timeline data={data} />;
 }
