@@ -25,6 +25,7 @@ import {
 } from "react-icons/si";
 // HackathonsPage.tsx
 import { TimelineEntry } from "@/components/ui/timeline";
+import {title} from "@/components/primitives";
 
 export default function HackathonsPage() {
   const data: TimelineEntry[] = [
@@ -268,5 +269,10 @@ export default function HackathonsPage() {
     },
   ];
 
-  return <Timeline data={data} />;
+  return (
+      <div className="w-full">
+        <h1 className={title()}>Hackathon Projects</h1>
+        <Timeline data={data} />
+      </div>
+  );
 }

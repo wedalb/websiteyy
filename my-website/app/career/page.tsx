@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Timeline } from "@/components/ui/timeline";
+import {title} from "@/components/primitives";
 
 export default function CareerPage() {
   const data = [
@@ -84,6 +85,7 @@ export default function CareerPage() {
 
   return (
     <div className="w-full">
+      <h1 className={title()}>My Career</h1>
       <Timeline data={data} />
     </div>
   );
